@@ -1,0 +1,13 @@
+[template]
+name = "deno-cli"
+description = "Deno CLI application with TypeScript, tests, and tasks"
+min_fledge_version = "0.7.0"
+
+[prompts]
+description = { message = "CLI description", default = "A Deno CLI tool" }
+command_name = { message = "Main command name", default = "hello" }
+
+[files]
+render = ["**/*.ts", "**/*.json", "**/*.md"]
+copy = []
+ignore = ["template.toml"]

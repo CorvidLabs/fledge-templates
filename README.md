@@ -4,29 +4,23 @@ Official template collection for [fledge](https://github.com/CorvidLabs/fledge) 
 
 ## Usage
 
-Add this repo to your fledge config:
+Use any template directly:
+
+```bash
+# Init from a specific template
+fledge init my-project -t CorvidLabs/fledge-templates/python-api
+
+# Preview first
+fledge init my-project -t CorvidLabs/fledge-templates/python-api --dry-run
+```
+
+Or add this repo to your config for `fledge list` integration:
 
 ```bash
 fledge config add templates.repos "CorvidLabs/fledge-templates"
-```
 
-Or use the CorvidLabs preset:
-
-```bash
+# Or use the CorvidLabs preset
 fledge config init --preset corvidlabs
-```
-
-Then browse and use templates:
-
-```bash
-# List all available templates (built-in + this repo)
-fledge list
-
-# Use a template from this collection
-fledge init my-project --template CorvidLabs/fledge-templates/python-api
-
-# Preview before creating
-fledge init my-project --template CorvidLabs/fledge-templates/python-api --dry-run
 ```
 
 ## Templates
@@ -34,11 +28,11 @@ fledge init my-project --template CorvidLabs/fledge-templates/python-api --dry-r
 | Template | Description | Language |
 |----------|-------------|----------|
 | `corvid-agent-skill` | Scaffold a new corvid-agent skill | TypeScript |
+| `deno-cli` | Deno CLI with TypeScript, tests, and tasks | TypeScript |
 | `mcp-server` | MCP tool server template | TypeScript |
 | `python-api` | Python API with FastAPI, tests, and Docker | Python |
 | `rust-workspace` | Rust multi-crate workspace | Rust |
-| `static-site` | Static site with build pipeline | HTML/CSS/JS |
-| `deno-cli` | Deno CLI with TypeScript | TypeScript |
+| `static-site` | Static site with HTML, CSS, JS | HTML/CSS/JS |
 
 ## Creating Templates
 
@@ -67,11 +61,13 @@ All templates have access to these built-in variables:
 
 ## Contributing
 
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide. Short version:
+
 1. Fork this repo
-2. Create a new template directory
-3. Add a `template.toml` manifest
-4. Test with `fledge init test --template ./your-template --dry-run`
-5. Submit a PR
+2. Create a new template directory (kebab-case)
+3. Add `template.toml` + `.tera` files + `README.md.tera`
+4. Test with `fledge init test -t ./your-template --dry-run`
+5. Submit a PR — all templates require maintainer approval
 
 ## License
 

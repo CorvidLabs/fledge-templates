@@ -1,0 +1,25 @@
+import { parseArgs } from "jsr:@std/cli/parse-args";
+
+const args = parseArgs(Deno.args, {
+  boolean: ["help", "version"],
+  alias: { h: "help", v: "version" },
+});
+
+if (args.help) {
+  console.log(`{{ project_name_kebab }} — {{ description }}
+
+Usage:
+  {{ project_name_kebab }} [options]
+
+Options:
+  -h, --help     Show this help
+  -v, --version  Show version`);
+  Deno.exit(0);
+}
+
+if (args.version) {
+  console.log("{{ project_name_kebab }} 0.1.0");
+  Deno.exit(0);
+}
+
+console.log("Hello from {{ project_name }}!");

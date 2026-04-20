@@ -1,0 +1,4 @@
+// {{ project_name }}
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('{{ project_name }} loaded');
+});

@@ -1,0 +1,27 @@
+# {{ project_name }}
+
+{{ description }}
+
+## Getting Started
+
+```bash
+# Run
+deno task dev
+
+# Test
+deno task test
+
+# Lint + format
+deno task lint
+deno task fmt
+```
+
+## Install
+
+```bash
+deno install --allow-all -n {{ project_name_kebab }} src/main.ts
+```
+
+## License
+
+{{ license }}
