@@ -7,6 +7,6 @@ min_fledge_version = "0.1.0"
 description = { message = "Project description", default = "A new monorepo" }
 
 [files]
-render = ["**/*.md", "**/*.yml", "**/*.yaml", "**/*.json", "**/*.toml"]
-copy = ["**/*.png", "**/*.ico"]
+render = ["**/*.md", "**/*.yml"]
+copy = []
 ignore = ["template.toml"]
