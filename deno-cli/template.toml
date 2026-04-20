@@ -6,6 +6,7 @@ min_fledge_version = "0.7.0"
 [prompts]
 description = { message = "CLI description", default = "A Deno CLI tool" }
 command_name = { message = "Main command name", default = "hello" }
+project_name_kebab = { message = "Project name (kebab-case)", default = "{{project_name}}" }
 
 [files]
 render = ["**/*.ts", "**/*.json", "**/*.md"]

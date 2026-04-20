@@ -6,6 +6,8 @@ min_fledge_version = "0.7.0"
 [prompts]
 description = { message = "Skill description", default = "A new corvid-agent skill" }
 trigger = { message = "When should this skill trigger?", default = "When the user asks about..." }
+project_name_kebab = { message = "Project name (kebab-case)", default = "{{ project_name | kebab_case }}" }
+project_name_camel = { message = "Project name (camelCase)", default = "{{ project_name | camel_case }}" }
 
 [files]
 render = ["**/*.md", "**/*.ts"]
