@@ -1,0 +1,35 @@
+name: Validate Templates
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout templates
+        uses: actions/checkout@v4
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache fledge build
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/bin/fledge
+            ~/.cargo/registry
+            ~/.cargo/git
+          key: fledge-${{ hashFiles('.github/workflows/validate.yml') }}
+
+      - name: Install fledge
+        run: |
+          if ! command -v fledge &> /dev/null; then
+            cargo install --git https://github.com/CorvidLabs/fledge.git --branch main
+          fi
+
+      - name: Validate all templates
+        run: fledge validate-template . --strict
