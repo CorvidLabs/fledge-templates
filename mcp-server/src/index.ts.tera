@@ -1,0 +1,43 @@
+import { Server } from "@modelcontextprotocol/sdk/server/index.js";
+import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import {
+  CallToolRequestSchema,
+  ListToolsRequestSchema,
+} from "@modelcontextprotocol/sdk/types.js";
+
+const server = new Server(
+  { name: "{{ project_name_kebab }}", version: "0.1.0" },
+  { capabilities: { tools: {} } }
+);
+
+server.setRequestHandler(ListToolsRequestSchema, async () => ({
+  tools: [
+    {
+      name: "{{ tool_name }}",
+      description: "{{ description }}",
+      inputSchema: {
+        type: "object" as const,
+        properties: {
+          message: { type: "string", description: "Input message" },
+        },
+        required: ["message"],
+      },
+    },
+  ],
+}));
+
+server.setRequestHandler(CallToolRequestSchema, async (request) => {
+  const { name, arguments: args } = request.params;
+
+  if (name === "{{ tool_name }}") {
+    const message = (args as Record<string, string>).message;
+    return {
+      content: [{ type: "text" as const, text: `Received: ${message}` }],
+    };
+  }
+
+  throw new Error(`Unknown tool: ${name}`);
+});
+
+const transport = new StdioServerTransport();
+await server.connect(transport);

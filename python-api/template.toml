@@ -1,0 +1,13 @@
+[template]
+name = "python-api"
+description = "Python API with FastAPI, tests, and Docker"
+min_fledge_version = "0.7.0"
+
+[prompts]
+description = { message = "API description", default = "A new REST API" }
+python_version = { message = "Python version", default = "3.12" }
+
+[files]
+render = ["**/*.py", "**/*.toml", "**/*.md", "**/*.yml", "**/*.yaml", "Dockerfile"]
+copy = []
+ignore = ["template.toml"]

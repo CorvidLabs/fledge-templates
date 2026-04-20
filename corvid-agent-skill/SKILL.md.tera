@@ -1,0 +1,26 @@
+# {{ project_name }}
+
+{{ description }}
+
+## Trigger
+
+{{ trigger }}
+
+## Usage
+
+Describe how this skill is used and what it does.
+
+## Examples
+
+```
+User: [example input]
+Agent: [example output]
+```
+
+## Dependencies
+
+- List any required tools or APIs
+
+## Notes
+
+- Any additional context for the skill

@@ -1,0 +1,13 @@
+[template]
+name = "corvid-agent-skill"
+description = "Scaffold a new corvid-agent skill with SKILL.md and handler"
+min_fledge_version = "0.7.0"
+
+[prompts]
+description = { message = "Skill description", default = "A new corvid-agent skill" }
+trigger = { message = "When should this skill trigger?", default = "When the user asks about..." }
+
+[files]
+render = ["**/*.md", "**/*.ts"]
+copy = []
+ignore = ["template.toml"]

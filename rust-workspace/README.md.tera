@@ -1,0 +1,21 @@
+# {{ project_name }}
+
+{{ description }}
+
+## Structure
+
+```
+crates/
+  core/     — shared library crate
+```
+
+## Build
+
+```bash
+cargo build
+cargo test
+```
+
+## License
+
+{{ license }}

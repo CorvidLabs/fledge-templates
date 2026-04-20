@@ -1,0 +1,13 @@
+[template]
+name = "mcp-server"
+description = "MCP tool server template with TypeScript and Bun"
+min_fledge_version = "0.7.0"
+
+[prompts]
+description = { message = "Server description", default = "An MCP tool server" }
+tool_name = { message = "Name of the first tool", default = "hello" }
+
+[files]
+render = ["**/*.ts", "**/*.json", "**/*.md"]
+copy = []
+ignore = ["template.toml"]

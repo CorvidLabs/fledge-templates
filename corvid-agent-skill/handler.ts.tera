@@ -1,0 +1,21 @@
+import type { SkillHandler, SkillContext } from "../types";
+
+/**
+ * {{ description }}
+ */
+export const {{ project_name_camel }}Handler: SkillHandler = {
+  name: "{{ project_name_kebab }}",
+  description: "{{ description }}",
+
+  canHandle(context: SkillContext): boolean {
+    // {{ trigger }}
+    return false;
+  },
+
+  async handle(context: SkillContext): Promise<string> {
+    // Implement skill logic here
+    return "Not yet implemented";
+  },
+};
+
+export default {{ project_name_camel }}Handler;

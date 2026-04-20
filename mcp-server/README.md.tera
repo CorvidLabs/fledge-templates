@@ -1,0 +1,47 @@
+# {{ project_name }}
+
+{{ description }}
+
+## Setup
+
+```bash
+bun install
+```
+
+## Usage
+
+```bash
+# Run the server
+bun run start
+
+# Development mode (auto-reload)
+bun run dev
+```
+
+## Tools
+
+### {{ tool_name }}
+
+{{ description }}
+
+**Input:**
+- `message` (string, required) — Input message
+
+## Configuration
+
+Add to your Claude Code MCP config:
+
+```json
+{
+  "mcpServers": {
+    "{{ project_name_kebab }}": {
+      "command": "bun",
+      "args": ["run", "src/index.ts"]
+    }
+  }
+}
+```
+
+## License
+
+{{ license }}

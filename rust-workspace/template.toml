@@ -1,0 +1,12 @@
+[template]
+name = "rust-workspace"
+description = "Rust multi-crate workspace with shared dependencies"
+min_fledge_version = "0.7.0"
+
+[prompts]
+description = { message = "Workspace description", default = "A Rust workspace" }
+
+[files]
+render = ["**/*.rs", "**/*.toml", "**/*.md"]
+copy = []
+ignore = ["template.toml"]
