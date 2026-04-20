@@ -27,9 +27,15 @@ jobs:
 
       - name: Install fledge
         run: |
-          if ! command -v fledge &> /dev/null; then
-            cargo install --git https://github.com/CorvidLabs/fledge.git --branch main
+          if ! fledge validate-template --help &> /dev/null 2>&1; then
+            cargo install --git https://github.com/CorvidLabs/fledge.git --branch main --force
           fi
 
       - name: Validate all templates
-        run: fledge validate-template . --strict
+        run: |
+          for dir in */; do
+            if [ -f "$dir/template.toml" ]; then
+              echo "Validating $dir..."
+              fledge validate-template "$dir" --strict
+            fi
+          done
