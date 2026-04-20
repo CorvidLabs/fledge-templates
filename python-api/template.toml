@@ -8,6 +8,6 @@ description = { message = "API description", default = "A new REST API" }
 python_version = { message = "Python version", default = "3.12" }
 
 [files]
-render = ["**/*.py", "**/*.toml", "**/*.md", "**/*.yml", "**/*.yaml", "Dockerfile"]
+render = ["**/*.py", "**/*.toml", "**/*.md", "Dockerfile"]
 copy = []
 ignore = ["template.toml"]
