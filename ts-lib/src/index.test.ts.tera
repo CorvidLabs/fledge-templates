@@ -1,0 +1,12 @@
+import { describe, expect, test } from "bun:test";
+import { greet } from "./index";
+
+describe("greet", () => {
+  test("returns greeting string", () => {
+    expect(greet("world")).toBe("Hello, world!");
+  });
+
+  test("uses provided name", () => {
+    expect(greet("{{ project_name }}")).toBe("Hello, {{ project_name }}!");
+  });
+});

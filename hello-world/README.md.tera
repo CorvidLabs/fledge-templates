@@ -1,0 +1,25 @@
+# {{ project_name }}
+
+{{ description }}
+
+## Getting Started
+
+```bash
+bun run src/main.ts
+```
+
+Or in watch mode:
+
+```bash
+bun --watch src/main.ts
+```
+
+## Author
+
+{{ author }} · {{ year }}
+
+{% if license != "" %}
+## License
+
+{{ license }}
+{% endif %}

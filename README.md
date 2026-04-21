@@ -28,9 +28,11 @@ fledge config init --preset corvidlabs
 | Template | Description | Language |
 |----------|-------------|----------|
 | `angular-app` | Angular application with mobile-first setup | TypeScript |
+| `bun-api` | Bun + Hono web API with typed routes, tests, and CI | TypeScript |
 | `corvid-agent-skill` | Scaffold a new corvid-agent skill | TypeScript |
 | `deno-cli` | Deno CLI with TypeScript, tests, and tasks | TypeScript |
 | `go-cli` | Go CLI with cobra, CI, and goreleaser | Go |
+| `hello-world` | Minimal starter — a README and a single entry point | TypeScript |
 | `mcp-server` | MCP tool server template | TypeScript |
 | `monorepo` | Monorepo with shared tooling, CI, and workspace conventions | Multi |
 | `python-api` | Python API with FastAPI, tests, and Docker | Python |
@@ -39,6 +41,7 @@ fledge config init --preset corvidlabs
 | `rust-workspace` | Rust multi-crate workspace | Rust |
 | `static-site` | Static site with HTML, CSS, JS | HTML/CSS/JS |
 | `swift-pkg` | Swift package with Package.swift and CI | Swift |
+| `ts-lib` | TypeScript library with tests, JSDoc, and npm publish workflow | TypeScript |
 
 ## Creating Templates
 

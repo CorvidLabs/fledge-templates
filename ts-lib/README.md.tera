@@ -1,0 +1,57 @@
+# {{ project_name }}
+
+{{ description }}
+
+## Installation
+
+```bash
+{% if npm_scope != "" %}
+npm install {{ npm_scope }}/{{ project_name_snake }}
+{% else %}
+npm install {{ project_name_snake }}
+{% endif %}
+```
+
+## Usage
+
+```typescript
+{% if npm_scope != "" %}
+import { greet } from "{{ npm_scope }}/{{ project_name_snake }}";
+{% else %}
+import { greet } from "{{ project_name_snake }}";
+{% endif %}
+
+console.log(greet("world"));
+```
+
+## API
+
+### `greet(name: string): string`
+
+Returns a greeting string.
+
+## Development
+
+```bash
+bun install
+bun test
+bun run build
+```
+
+## Publishing
+
+```bash
+npm publish --access public
+```
+
+CI automatically publishes on version tags (`v*.*.*`).
+
+## Author
+
+{{ author }} · {{ year }}
+
+{% if license != "" %}
+## License
+
+{{ license }}
+{% endif %}

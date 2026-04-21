@@ -1,0 +1,12 @@
+{
+  "name": "{{ project_name_snake }}",
+  "version": "0.1.0",
+  "description": "{{ description }}",
+  "scripts": {
+    "start": "bun run src/main.ts",
+    "dev": "bun --watch src/main.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}

@@ -1,0 +1,15 @@
+[template]
+name = "bun-api"
+description = "Bun + Hono web API with typed routes, tests, and CI"
+min_fledge_version = "0.1.0"
+
+[prompts]
+description = { message = "Project description", default = "A Bun web API" }
+port = { message = "Default port", default = "3000" }
+
+[files]
+render = ["**/*.ts", "**/*.json", "**/*.md", "**/*.yml"]
+ignore = ["template.toml"]
+
+[hooks]
+post_create = ["bun install"]

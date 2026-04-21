@@ -1,0 +1,15 @@
+[template]
+name = "ts-lib"
+description = "TypeScript library with tests, JSDoc, and npm publish workflow"
+min_fledge_version = "0.1.0"
+
+[prompts]
+description = { message = "Library description", default = "A TypeScript library" }
+npm_scope = { message = "npm scope (e.g. @myorg — leave empty for unscoped)", default = "" }
+
+[files]
+render = ["**/*.ts", "**/*.json", "**/*.md", "**/*.yml"]
+ignore = ["template.toml"]
+
+[hooks]
+post_create = ["bun install"]

@@ -1,0 +1,42 @@
+# {{ project_name }}
+
+{{ description }}
+
+Built with [Bun](https://bun.sh) and [Hono](https://hono.dev).
+
+## Getting Started
+
+```bash
+bun install
+bun run dev
+```
+
+Server starts at `http://localhost:{{ port }}`.
+
+## Endpoints
+
+| Method | Path | Description |
+|--------|------|-------------|
+| `GET` | `/health` | Health check |
+
+## Testing
+
+```bash
+bun test
+```
+
+## Building
+
+```bash
+bun build src/index.ts --outdir dist --target bun
+```
+
+## Author
+
+{{ author }} · {{ year }}
+
+{% if license != "" %}
+## License
+
+{{ license }}
+{% endif %}

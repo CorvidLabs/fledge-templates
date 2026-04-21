@@ -1,0 +1,34 @@
+{
+  {% if npm_scope != "" %}
+  "name": "{{ npm_scope }}/{{ project_name_snake }}",
+  {% else %}
+  "name": "{{ project_name_snake }}",
+  {% endif %}
+  "version": "0.1.0",
+  "description": "{{ description }}",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target browser --format esm && bun x tsc --emitDeclarationOnly --outDir dist",
+    "test": "bun test",
+    "prepublishOnly": "bun run build && bun test"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [],
+  "author": "{{ author }}",
+  "license": "{{ license }}",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.0.0"
+  }
+}

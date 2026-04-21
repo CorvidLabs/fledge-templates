@@ -1,0 +1,13 @@
+import { Hono } from "hono";
+import { health } from "./routes/health";
+
+const app = new Hono();
+
+app.route("/health", health);
+
+app.get("/", (c) => c.json({ name: "{{ project_name }}", version: "0.1.0" }));
+
+export default {
+  port: {{ port }},
+  fetch: app.fetch,
+};

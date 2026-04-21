@@ -1,0 +1,14 @@
+[template]
+name = "hello-world"
+description = "Minimal starter — a README and a single entry point. Great for learning template authoring."
+min_fledge_version = "0.1.0"
+
+[prompts]
+description = { message = "Project description", default = "A project by {{ author }}" }
+
+[files]
+render = ["**/*.ts", "**/*.json", "**/*.md"]
+ignore = ["template.toml"]
+
+[hooks]
+post_create = ["bun install"]
