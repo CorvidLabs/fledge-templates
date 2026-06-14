@@ -3,15 +3,60 @@ name: Validate Templates
 on:
   push:
     branches: [main]
+    paths:
+      - angular-app/**
+      - bun-api/**
+      - corvid-agent-skill/**
+      - deno-cli/**
+      - go-cli/**
+      - hello-world/**
+      - mcp-server/**
+      - monorepo/**
+      - python-api/**
+      - python-cli/**
+      - rust-cli/**
+      - rust-lib/**
+      - rust-workspace/**
+      - static-site/**
+      - swift-pkg/**
+      - ts-bun/**
+      - ts-lib/**
+      - ts-node/**
+      - .github/workflows/validate.yml
   pull_request:
     branches: [main]
+    paths:
+      - angular-app/**
+      - bun-api/**
+      - corvid-agent-skill/**
+      - deno-cli/**
+      - go-cli/**
+      - hello-world/**
+      - mcp-server/**
+      - monorepo/**
+      - python-api/**
+      - python-cli/**
+      - rust-cli/**
+      - rust-lib/**
+      - rust-workspace/**
+      - static-site/**
+      - swift-pkg/**
+      - ts-bun/**
+      - ts-lib/**
+      - ts-node/**
+      - .github/workflows/validate.yml
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - name: Checkout templates
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
