@@ -53,7 +53,9 @@
     "ts-bun/",
     "ts-lib/",
     "ts-node/",
-    "scripts/"
+    "scripts/",
+    "README.md",
+    "CONTRIBUTING.md"
   ],
   "ignored_paths": [
     ".specsync/",
