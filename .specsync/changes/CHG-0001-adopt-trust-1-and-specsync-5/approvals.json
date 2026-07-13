@@ -1,0 +1,25 @@
+{
+  "approvals": [
+    {
+      "gate": "definition",
+      "actor": "user:0xLeif",
+      "timestamp": 1783832489,
+      "digest": "14f879ff91d63d371ee554d7b320e93b023e8bc6417a6d3cbdf606e999d5b534",
+      "note": "Authorized by the approved organization-wide SpecSync 5 / Trust 1 migration plan."
+    },
+    {
+      "gate": "definition",
+      "actor": "0xLeif",
+      "timestamp": 1783904998,
+      "digest": "21d8aca1a0947588ad84ae5759bae894ee423a6c5d272256e452c92ea7ffc8ad",
+      "note": "Reviewed template governance adoption after all 18 templates, hosted Trust/CodeQL, agent integrations, and required trust protection passed."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "0xLeif",
+      "timestamp": 1783905005,
+      "digest": "cb3c6d76ceab6e4f9ca3d5e23052c7e59ceb6492778eb5e99b9d42b49b4271d5",
+      "note": "Approved after deterministic validation of all 18 templates, hosted Trust/CodeQL success, and required trust protection."
+    }
+  ]
+}

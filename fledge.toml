@@ -1,0 +1,6 @@
+[tasks]
+validate = "bash scripts/validate-templates.sh"
+
+[lanes.verify]
+description = "Validate every published template manifest and rendered file set"
+steps = ["validate"]
