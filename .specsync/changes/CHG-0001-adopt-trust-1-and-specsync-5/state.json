@@ -5,10 +5,10 @@
   "title": "Adopt Trust 1 and SpecSync 5",
   "description": "Adopt Trust 1 and SpecSync 5",
   "kind": "migration",
-  "state": "implementing",
+  "state": "accepted",
   "base_commit": "9dcb72dbbb6df34c5a9717e7d307d5b9b0770b72",
   "created_at": 1783832489,
-  "updated_at": 1783832489,
+  "updated_at": 1783905005,
   "affected_specs": [],
   "affected_paths": [
     ".github/workflows/",

@@ -1,0 +1,16 @@
+{
+  "timestamp": 1783904999,
+  "commit": "e5ac3e2a35aa81671cb8e26bd13c8b95475187f2",
+  "contract_digest": "21d8aca1a0947588ad84ae5759bae894ee423a6c5d272256e452c92ea7ffc8ad",
+  "workspace_digest": "e5c7f097b13e258936962c11024df1bcc2f1643e3fe8ae91b0bd27ebd69bc0df",
+  "acceptance_input_digest": "caba4bdb4775e6554ad59101676271db2ea1cb63dd3bf0fd0b5c3f637113dc7d",
+  "passed": true,
+  "commands": [
+    {
+      "command": "bash scripts/validate-templates.sh",
+      "success": true,
+      "exit_code": 0
+    }
+  ],
+  "requirement_ids": []
+}
